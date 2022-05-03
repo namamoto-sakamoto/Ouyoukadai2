@@ -16,10 +16,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update(user_params)
+    if @user.update(params[:id])
       redirect_to users_path(@user), notice: "You have updated user successfully."
     else
-      render "show"
+      render "edit"zs
     end
   end
 
