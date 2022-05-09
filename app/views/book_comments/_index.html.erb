@@ -9,6 +9,7 @@
             <%= book_comment.user.name %>
           <% end %>
         </td>
+        <td><%= render "favorites/btn", book: @book %></td>
         <td><%= book_comment.comment_content %></td>
         <td>
           <% if book_comment.user == current_user %>
